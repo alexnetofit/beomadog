@@ -65,15 +65,15 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-sm">
+        <div className="relative mx-auto w-full max-w-md">
           <div className="absolute inset-6 rounded-full bg-gold-300/40 blur-2xl" />
           <Image
-            src={digesticao.image}
-            alt={digesticao.imageAlt}
-            width={600}
-            height={900}
+            src={digesticao.heroImage}
+            alt={digesticao.heroImageAlt}
+            width={611}
+            height={868}
             priority
-            className="relative mx-auto h-auto w-full max-w-xs drop-shadow-2xl sm:max-w-sm"
+            className="relative mx-auto h-auto w-full drop-shadow-2xl"
           />
         </div>
       </Container>

@@ -15,8 +15,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.beomadog.com.br"),
   title: `${siteConfig.brand.name} | ${siteConfig.brand.tagline}`,
   description: siteConfig.brand.description,
+  openGraph: {
+    title: `${siteConfig.brand.name} | ${siteConfig.brand.tagline}`,
+    description: siteConfig.brand.description,
+    url: "https://www.beomadog.com.br",
+    siteName: siteConfig.brand.name,
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "DigestiCão — petisco funcional para cães com pastor alemão ao lado do pote",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.brand.name} | ${siteConfig.brand.tagline}`,
+    description: siteConfig.brand.description,
+    images: ["/og.png"],
+  },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

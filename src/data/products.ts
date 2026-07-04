@@ -21,8 +21,10 @@ export interface Product {
   shortName: string;
   tagline: string;
   weightLabel: string;
-  image: string;
-  imageAlt: string;
+  heroImage: string;
+  heroImageAlt: string;
+  showcaseImage: string;
+  showcaseImageAlt: string;
   keyIngredients: string[];
   priceTiers: PriceTier[];
 }
@@ -33,8 +35,10 @@ export const digesticao: Product = {
   shortName: "DigestiCão",
   tagline: "Suporte digestivo e dermatológico",
   weightLabel: "120g",
-  image: "/images/products/digesticao-pote.png",
-  imageAlt: "Pote de DigestiCão, petisco funcional para cães com complexo probiótico, ômega-3 e enzimas digestivas",
+  heroImage: "/images/products/digesticao-hero.png",
+  heroImageAlt: "Pastor alemão sentado ao lado do pote de DigestiCão, petisco funcional para suporte digestivo e dermatológico",
+  showcaseImage: "/images/products/digesticao-composicao.png",
+  showcaseImageAlt: "Pote de DigestiCão rodeado por folhas, gota de ômega-3 e moléculas, ilustrando os ingredientes do petisco funcional",
   keyIngredients: ["Complexo Probiótico", "Ômega-3", "Enzimas Digestivas"],
   priceTiers: [
     {

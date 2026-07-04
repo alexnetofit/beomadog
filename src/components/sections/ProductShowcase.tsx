@@ -6,12 +6,12 @@ export function ProductShowcase() {
   return (
     <section className="py-16 sm:py-20">
       <Container className="grid items-center gap-12 lg:grid-cols-2">
-        <div className="relative mx-auto w-full max-w-xs lg:order-2">
+        <div className="relative mx-auto w-full max-w-sm lg:order-2">
           <Image
-            src={digesticao.image}
-            alt={digesticao.imageAlt}
-            width={500}
-            height={750}
+            src={digesticao.showcaseImage}
+            alt={digesticao.showcaseImageAlt}
+            width={823}
+            height={899}
             className="mx-auto h-auto w-full drop-shadow-xl"
           />
         </div>
