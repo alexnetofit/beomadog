@@ -11,6 +11,8 @@ export interface PriceTier {
   badge?: string;
   highlighted?: boolean;
   whatsappMessage: string;
+  image: string;
+  imageAlt: string;
 }
 
 export interface Product {
@@ -39,21 +41,12 @@ export const digesticao: Product = {
       id: "1-pote",
       quantityLabel: "1 pote",
       units: 1,
-      price: 147,
-      pricePerUnit: 147,
+      price: 227,
+      pricePerUnit: 227,
       whatsappMessage:
-        "Olá! Quero comprar 1 pote de DigestiCão (R$147). Pode me ajudar?",
-    },
-    {
-      id: "2-potes",
-      quantityLabel: "2 potes",
-      units: 2,
-      price: 267,
-      pricePerUnit: 133.5,
-      badge: "Mais escolhido",
-      highlighted: true,
-      whatsappMessage:
-        "Olá! Quero comprar o kit com 2 potes de DigestiCão (R$267). Pode me ajudar?",
+        "Olá! Quero comprar 1 pote de DigestiCão (R$227). Pode me ajudar?",
+      image: "/images/products/digesticao-kit-1.png",
+      imageAlt: "1 pote de DigestiCão",
     },
     {
       id: "3-potes",
@@ -61,9 +54,24 @@ export const digesticao: Product = {
       units: 3,
       price: 347,
       pricePerUnit: 115.67,
-      badge: "Melhor custo-benefício",
+      badge: "Mais escolhido",
+      highlighted: true,
       whatsappMessage:
         "Olá! Quero comprar o kit com 3 potes de DigestiCão (R$347). Pode me ajudar?",
+      image: "/images/products/digesticao-kit-3.png",
+      imageAlt: "Kit com 3 potes de DigestiCão",
+    },
+    {
+      id: "5-potes",
+      quantityLabel: "5 potes",
+      units: 5,
+      price: 467,
+      pricePerUnit: 93.4,
+      badge: "Melhor custo-benefício",
+      whatsappMessage:
+        "Olá! Quero comprar o kit com 5 potes de DigestiCão (R$467). Pode me ajudar?",
+      image: "/images/products/digesticao-kit-5.png",
+      imageAlt: "Kit com 5 potes de DigestiCão",
     },
   ],
 };

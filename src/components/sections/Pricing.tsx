@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { buildWhatsAppLink } from "@/config/site";
 import { digesticao } from "@/data/products";
 import { Container } from "@/components/ui/Container";
@@ -41,6 +42,16 @@ export function Pricing() {
                 </span>
               )}
 
+              <div className="mx-auto h-32 w-full max-w-[220px]">
+                <Image
+                  src={tier.image}
+                  alt={tier.imageAlt}
+                  width={440}
+                  height={260}
+                  className="h-full w-full object-contain drop-shadow-lg"
+                />
+              </div>
+
               <div className="flex flex-col items-center gap-1 pt-2 text-center">
                 <span
                   className={`text-sm font-semibold uppercase tracking-wide ${
@@ -66,7 +77,9 @@ export function Pricing() {
                   tier.highlighted ? "text-gold-50/80" : "text-cocoa-600"
                 }`}
               >
-                <li>✓ DigestiCão {digesticao.weightLabel}</li>
+                <li>
+                  ✓ {tier.quantityLabel} de DigestiCão {digesticao.weightLabel}
+                </li>
                 <li>✓ Complexo probiótico + ômega-3 + enzimas</li>
                 <li>✓ Atendimento direto pelo WhatsApp</li>
               </ul>
