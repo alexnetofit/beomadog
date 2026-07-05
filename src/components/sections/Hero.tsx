@@ -20,7 +20,7 @@ export function Hero() {
       <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-leaf-400/20 blur-3xl" />
 
       <Container className="relative grid items-center gap-12 lg:grid-cols-2">
-        <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+        <div className="order-2 flex flex-col items-center gap-6 text-center lg:order-1 lg:items-start lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-cocoa-900 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-gold-300">
             Qualidade Premium
           </span>
@@ -65,15 +65,15 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md">
+        <div className="order-1 relative mx-auto w-full max-w-md lg:order-2">
           <div className="absolute inset-6 rounded-full bg-gold-300/40 blur-2xl" />
           <Image
             src={digesticao.heroImage}
             alt={digesticao.heroImageAlt}
-            width={611}
-            height={868}
+            width={600}
+            height={900}
             priority
-            className="relative mx-auto h-auto w-full drop-shadow-2xl"
+            className="relative mx-auto h-auto w-full max-w-xs drop-shadow-2xl sm:max-w-sm"
           />
         </div>
       </Container>
