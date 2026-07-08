@@ -1,4 +1,6 @@
-import { testimonials } from "@/data/testimonials";
+import Image from "next/image";
+import { testimonialVideos } from "@/data/testimonials";
+import { beforeAfterResults } from "@/data/results";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -11,28 +13,51 @@ export function Testimonials() {
           title={<span className="text-gold-50">O que os tutores dizem</span>}
         />
 
-        <div className="grid w-full gap-6 sm:grid-cols-3">
-          {testimonials.map((testimonial) => (
+        <div className="-mx-5 flex w-full snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:overflow-visible lg:px-0 lg:pb-0">
+          {testimonialVideos.map((video) => (
             <div
-              key={testimonial.name}
-              className="flex flex-col gap-4 rounded-2xl bg-white/5 p-6 ring-1 ring-gold-500/15"
+              key={video.id}
+              className="w-[78%] shrink-0 snap-center overflow-hidden rounded-2xl bg-white/5 ring-1 ring-gold-500/15 sm:w-[45%] lg:w-auto"
             >
-              <p className="text-sm leading-relaxed text-gold-50/80">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-              <div className="mt-auto flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500/20 text-sm font-semibold text-gold-300">
-                  {testimonial.initials}
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-gold-50">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-xs text-gold-50/60">{testimonial.dog}</p>
-                </div>
-              </div>
+              <video
+                src={video.src}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={video.label}
+                className="block w-full bg-black"
+              />
             </div>
           ))}
+        </div>
+
+        <div className="flex w-full flex-col items-center gap-6">
+          <SectionHeading
+            eyebrow="Resultados reais"
+            title={
+              <span className="text-gold-50">
+                Antes e depois de quem já usa
+              </span>
+            }
+          />
+
+          <div className="-mx-5 flex w-full snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0 lg:pb-0">
+            {beforeAfterResults.map((result) => (
+              <div
+                key={result.id}
+                className="w-[68%] shrink-0 snap-center overflow-hidden rounded-2xl bg-white/5 ring-1 ring-gold-500/15 sm:w-[38%] lg:w-auto"
+              >
+                <Image
+                  src={result.src}
+                  alt={result.alt}
+                  width={result.width}
+                  height={result.height}
+                  sizes="(min-width: 1024px) 23vw, (min-width: 640px) 38vw, 68vw"
+                  className="block h-auto w-full"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

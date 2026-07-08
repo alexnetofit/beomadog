@@ -1,34 +1,23 @@
-// ATENÇÃO: depoimentos de exemplo (placeholder) para validar o layout.
-// Antes de publicar o site, substituir por depoimentos reais de
-// clientes (com autorização) — não usar estes textos em produção.
+export interface TestimonialVideo {
+  id: string;
+  src: string;
+  label: string;
+}
 
-export interface Testimonial {
-  name: string;
-  dog: string;
-  quote: string;
-  initials: string;
-};
-
-export const testimonials: Testimonial[] = [
+export const testimonialVideos: TestimonialVideo[] = [
   {
-    name: "Marina S.",
-    dog: "tutora da Nina, Bulldog Francês",
-    quote:
-      "Depoimento de exemplo — substituir por relato real. Ex.: percepção sobre a rotina digestiva da Nina após incluir o DigestiCão na alimentação.",
-    initials: "MS",
+    id: "depo-01",
+    src: "/videos/testimonials/depo-01.mp4",
+    label: "Depoimento 1",
   },
   {
-    name: "Rafael T.",
-    dog: "tutor do Thor, Golden Retriever",
-    quote:
-      "Depoimento de exemplo — substituir por relato real. Ex.: percepção sobre pelagem e disposição do Thor.",
-    initials: "RT",
+    id: "depo-02",
+    src: "/videos/testimonials/depo-02.mp4",
+    label: "Depoimento 2",
   },
   {
-    name: "Camila A.",
-    dog: "tutora da Mel, SRD",
-    quote:
-      "Depoimento de exemplo — substituir por relato real. Ex.: facilidade de dar o petisco na rotina diária da Mel.",
-    initials: "CA",
+    id: "depo-03",
+    src: "/videos/testimonials/depo-03.mp4",
+    label: "Depoimento 3",
   },
 ];
