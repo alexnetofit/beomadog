@@ -21,6 +21,7 @@ export function Testimonials() {
             >
               <video
                 src={video.src}
+                poster={video.poster}
                 controls
                 playsInline
                 preload="metadata"

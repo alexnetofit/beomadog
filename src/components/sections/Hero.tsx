@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { buildWhatsAppLink } from "@/config/site";
 import { digesticao } from "@/data/products";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -37,15 +36,8 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button
-              href={buildWhatsAppLink(
-                "Olá! Quero comprar o DigestiCão. Pode me ajudar?"
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="whatsapp"
-            >
-              Comprar pelo WhatsApp
+            <Button href="#planos" variant="primary">
+              Ver Planos DigestiCão
             </Button>
             <Button href="#beneficios" variant="outline">
               Ver benefícios

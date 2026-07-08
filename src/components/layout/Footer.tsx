@@ -26,25 +26,6 @@ export function Footer() {
               </a>
             ))}
           </nav>
-
-          <div className="flex flex-col gap-2 text-sm">
-            <a
-              href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gold-300"
-            >
-              WhatsApp: {siteConfig.contact.whatsappDisplay}
-            </a>
-            <a
-              href={siteConfig.contact.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gold-300"
-            >
-              Instagram: {siteConfig.contact.instagramHandle}
-            </a>
-          </div>
         </div>
 
         <div className="flex flex-col gap-2 border-t border-gold-50/10 pt-6 text-xs text-gold-50/50">

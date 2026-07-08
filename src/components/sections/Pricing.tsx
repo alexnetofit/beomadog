@@ -42,7 +42,7 @@ export function Pricing() {
                 </span>
               )}
 
-              <div className="mx-auto h-32 w-full max-w-[220px]">
+              <div className="mx-auto h-56 w-full max-w-[320px] sm:h-64 sm:max-w-[360px] lg:h-32 lg:max-w-[220px]">
                 <Image
                   src={tier.image}
                   alt={tier.imageAlt}
