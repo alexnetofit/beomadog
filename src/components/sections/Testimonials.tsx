@@ -45,7 +45,7 @@ export function Testimonials() {
             {beforeAfterResults.map((result) => (
               <div
                 key={result.id}
-                className="w-[68%] shrink-0 snap-center overflow-hidden rounded-2xl bg-white/5 ring-1 ring-gold-500/15 sm:w-[38%] lg:w-auto"
+                className="relative w-[68%] shrink-0 snap-center overflow-hidden rounded-2xl bg-white/5 ring-1 ring-gold-500/15 sm:w-[38%] lg:w-auto"
               >
                 <Image
                   src={result.src}
@@ -55,6 +55,14 @@ export function Testimonials() {
                   sizes="(min-width: 1024px) 23vw, (min-width: 640px) 38vw, 68vw"
                   className="block h-auto w-full"
                 />
+                {result.badgeLabel && (
+                  <span
+                    className="absolute left-1/2 top-[10%] -translate-x-1/2 rounded-2xl px-5 py-2 text-xl font-extrabold text-black shadow-lg"
+                    style={{ backgroundColor: "#fedc02" }}
+                  >
+                    {result.badgeLabel}
+                  </span>
+                )}
               </div>
             ))}
           </div>
