@@ -17,7 +17,7 @@ export function Testimonials() {
           {testimonialVideos.map((video) => (
             <div
               key={video.id}
-              className="w-[78%] shrink-0 snap-center overflow-hidden rounded-2xl bg-white/5 ring-1 ring-gold-500/15 sm:w-[45%] lg:w-auto"
+              className="aspect-[9/16] w-[78%] shrink-0 snap-center overflow-hidden rounded-2xl bg-white/5 ring-1 ring-gold-500/15 sm:w-[45%] lg:w-auto"
             >
               <video
                 src={video.src}
@@ -26,7 +26,7 @@ export function Testimonials() {
                 playsInline
                 preload="metadata"
                 aria-label={video.label}
-                className="block w-full bg-black"
+                className="h-full w-full bg-black object-cover"
               />
             </div>
           ))}

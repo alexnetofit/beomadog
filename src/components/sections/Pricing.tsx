@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { buildWhatsAppLink } from "@/config/site";
 import { digesticao } from "@/data/products";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -17,7 +16,7 @@ export function Pricing() {
         <SectionHeading
           eyebrow="Planos"
           title="Escolha o kit ideal para o seu cão"
-          subtitle="Quanto maior o kit, menor o valor por pote. Pedido e pagamento combinados diretamente pelo WhatsApp."
+          subtitle="Quanto maior o kit, menor o valor por pote. Pagamento seguro direto pelo checkout."
         />
 
         <div className="grid w-full gap-6 lg:grid-cols-3">
@@ -81,11 +80,11 @@ export function Pricing() {
                   ✓ {tier.quantityLabel} de DigestiCão {digesticao.weightLabel}
                 </li>
                 <li>✓ Complexo probiótico + ômega-3 + enzimas</li>
-                <li>✓ Atendimento direto pelo WhatsApp</li>
+                <li>✓ Checkout seguro, pagamento online</li>
               </ul>
 
               <Button
-                href={buildWhatsAppLink(tier.whatsappMessage)}
+                href={tier.checkoutUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant={tier.highlighted ? "primary" : "outline"}

@@ -10,7 +10,7 @@ export interface PriceTier {
   pricePerUnit: number;
   badge?: string;
   highlighted?: boolean;
-  whatsappMessage: string;
+  checkoutUrl: string;
   image: string;
   imageAlt: string;
 }
@@ -47,8 +47,7 @@ export const digesticao: Product = {
       units: 1,
       price: 227,
       pricePerUnit: 227,
-      whatsappMessage:
-        "Olá! Quero comprar 1 pote de DigestiCão (R$227). Pode me ajudar?",
+      checkoutUrl: "https://go.leonaflow.com/pay/digesticao-1-pote",
       image: "/images/products/digesticao-kit-1.png",
       imageAlt: "1 pote de DigestiCão",
     },
@@ -60,8 +59,7 @@ export const digesticao: Product = {
       pricePerUnit: 115.67,
       badge: "Mais escolhido",
       highlighted: true,
-      whatsappMessage:
-        "Olá! Quero comprar o kit com 3 potes de DigestiCão (R$347). Pode me ajudar?",
+      checkoutUrl: "https://go.leonaflow.com/pay/digesticao-3-potes",
       image: "/images/products/digesticao-kit-3.png",
       imageAlt: "Kit com 3 potes de DigestiCão",
     },
@@ -72,8 +70,7 @@ export const digesticao: Product = {
       price: 467,
       pricePerUnit: 93.4,
       badge: "Melhor custo-benefício",
-      whatsappMessage:
-        "Olá! Quero comprar o kit com 5 potes de DigestiCão (R$467). Pode me ajudar?",
+      checkoutUrl: "https://go.leonaflow.com/pay/digesticao-5-potes",
       image: "/images/products/digesticao-kit-5.png",
       imageAlt: "Kit com 5 potes de DigestiCão",
     },

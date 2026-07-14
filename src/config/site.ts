@@ -12,8 +12,8 @@ export const siteConfig = {
     locale: "pt-BR",
   },
   contact: {
-    whatsappNumber: "5512991426510",
-    whatsappDisplay: "(12) 99142-6510",
+    whatsappNumber: "553591635789",
+    whatsappDisplay: "(35) 9163-5789",
     instagramHandle: "@digesticao", // placeholder — atualizar quando o perfil oficial existir
     instagramUrl: "https://instagram.com/digesticao",
   },
