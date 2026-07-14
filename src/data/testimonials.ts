@@ -24,4 +24,10 @@ export const testimonialVideos: TestimonialVideo[] = [
     poster: "/videos/testimonials/depo-03-poster.jpg",
     label: "Depoimento 3",
   },
+  {
+    id: "depo-04",
+    src: "/videos/testimonials/depo-04.mp4",
+    poster: "/videos/testimonials/depo-04-poster.jpg",
+    label: "Depoimento 4",
+  },
 ];

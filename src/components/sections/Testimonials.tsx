@@ -13,7 +13,7 @@ export function Testimonials() {
           title={<span className="text-gold-50">O que os tutores dizem</span>}
         />
 
-        <div className="-mx-5 flex w-full snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:overflow-visible lg:px-0 lg:pb-0">
+        <div className="-mx-5 flex w-full snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0 lg:pb-0">
           {testimonialVideos.map((video) => (
             <div
               key={video.id}
